@@ -24,7 +24,7 @@ tableau = [5, 17, 19, 13, 10, 17, 17, 19, 14, 5, 5, 9, 20, 7, 12, 18, 19, 15, 12
            18, 3, 4, 13, 6, 13, 15, 7, 9, 20, 2, 9, 15, 9, 14, 15, 7]
 
 
-def trouver_moyenne(tableau):
+def trouver_moyenne(tab):
     somme = 0
     n = len(tableau)
     print(n)
