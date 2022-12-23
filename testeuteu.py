@@ -14,7 +14,7 @@ def mdp_verif(x_mdp):
     """
     print(x_mdp.lower())
 
-    if len(mdp) > 10:
+    if len(x_mdp) > 10:
         return False
 
     minuscules = 0
