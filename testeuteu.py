@@ -1,8 +1,8 @@
 def mdp_verif(x_mdp):
     """
     :param x_mdp: variable en paramètre dans la fonction permettant de récupérer le mot de passe
-    :return: pour le premier return l'instruction conditionnelle doit retourner False si la taille du mot de passe n'est
-    pas respecté
+    :return: pour le premier return l'instruction conditionnelle doit retourner False si la taille du mot de passe
+    n'est pas respecté
     :return: le deuxième return de la boucle imbriquant des instructions conditionnelles renvoie chaque élément de la
     chaine de caractère à vérifier si les conditions y référent sont respectés
 
@@ -14,7 +14,7 @@ def mdp_verif(x_mdp):
     """
     print(x_mdp.lower())
 
-    if len(x_mdp) > 10:
+    if len(x_mdp) < 10:
         return False
 
     minuscules = 0
