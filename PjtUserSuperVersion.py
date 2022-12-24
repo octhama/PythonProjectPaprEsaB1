@@ -1,9 +1,9 @@
 # Fonction par variable pour vérifier un prénom
 def check_prenom(x_prenom):
-    # Vérifie chaque caractère dans le prénom
     caractere_pas_ok = ""
-    # Si le caractère n'est pas alphabétique ou numérique, ajoute-le à la chaîne de caractères non valides
+    # Vérifie chaque caractère dans le prénom
     for c in x_prenom:
+        # Si le caractère n'est pas alphabétique ou numérique, ajoute-le à la chaîne de caractères non valides
         if not c.isalnum():
             caractere_pas_ok += c
     # Si la chaîne de caractères non valides est vide, le prénom est valide
