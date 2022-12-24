@@ -1,3 +1,7 @@
+# Auteur : Hasler TEHOU
+# Date de création : 24/12/2022
+# Licence : https://github.com/octhvmv/PythonProjectPaprEsaB1/blob/main/LICENSE
+
 # Fonction par variable pour vérifier un prénom
 def check_prenom(x_prenom):
     caractere_pas_ok = ""  # Initialisation d'une variable chaîne de caractères vide
@@ -292,7 +296,7 @@ print("Les informations du deuxième utilisateurs ont été bien enregistrer..."
       utilisateur_2_nom, "domicilié au", utilisateur_2_adresse, "Namur", ", avec pour adresse mail",
       utilisateur_2_email, "aka", utilisateur_2_login, "et mot de passe crypté", utilisateur_2_mdp_cache)
 
-# Séparateur affichant 100 étoiles sur une ligne
+# Séparateur affichant 300 étoiles sur une ligne
 print("*" * 300)
 
 # Vérifie si les logins des deux utilisateurs sont égaux
@@ -301,5 +305,5 @@ if utilisateur_login_check(utilisateur_1_login, utilisateur_2_login):
 else:
     print("Logins pas similaire ;)")
 
-# Séparateur affichant 100 étoiles sur une ligne
+# Séparateur affichant 300 étoiles sur une ligne
 print("*" * 300)
