@@ -1,4 +1,4 @@
-def input_information(x_infos):
+def input_information():
     # Vérifie que le nom et le prénom n'ont pas la même longueur
     if len(name) == len(first_name):
         print("Le nom et le prénom ne peuvent pas avoir la même longueur.")
@@ -23,13 +23,12 @@ def input_information(x_infos):
             "caractères spéciaux.")
         return
 
-    # Vérifie que le mot de passe a au moins 10 caractères et comprend au moins une majuscule, une minuscule,
+    # Vérifie que le mot de passe à au moins 10 caractères et comprend au moins une majuscule, une minuscule,
     # un chiffre et un caractère spécial
-    if len(password) < 10 or not any(c.isupper() for c in password) or not any(
-            c.islower() for c in password) or not any(c.isdigit() for c in password) or not any(not c.isalnum() for c in password):
-        print(
-            "Le mot de passe doit avoir au moins 10 caractères et comprendre au moins une majuscule, une minuscule, "
-            "un chiffre et un caractère spécial.")
+    if len(password) < 10 or not any(c.isupper() for c in password) or not any(c.islower() for c in password) \
+            or not any(c.isdigit() for c in password) or not any(not c.isalnum() for c in password):
+        print("Le mot de passe doit avoir au moins 10 caractères et comprendre au moins une "
+              "majuscule, une minuscule, un chiffre et un caractère spécial.")
         return
 
     # Affiche les éléments précédemment entrés
