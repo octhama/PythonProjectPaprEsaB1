@@ -8,8 +8,8 @@ def mdp_verif(x_mdp):
         return False
     print(x_mdp.lower())
 
-    if len(x_mdp) < 10:
-        return False
+    if len(x_mdp) >= 10:
+        return True
 
     minuscules = 0
     majuscules = 0

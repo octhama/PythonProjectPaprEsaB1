@@ -78,8 +78,8 @@ def check_mdp(x_mdp):
     taille_mdp = len(x_mdp)
 
     # Si la longueur du mot de passe est inférieure à 10, renvoie True
-    if taille_mdp < 10:
-        return False
+    if taille_mdp >= 10:
+        return True
 
     # Initialise les compteurs pour les différents types de caractères
     minuscules = 0  # Initialisation d'une variable entière à 0...
