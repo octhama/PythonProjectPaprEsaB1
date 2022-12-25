@@ -1,5 +1,6 @@
 # Auteur : Hasler TEHOU
 # Date de création : 24/12/2022
+# Exécuter sous environnement Python 3.11
 # Licence : https://github.com/octhvmv/PythonProjectPaprEsaB1/blob/main/LICENSE
 
 
