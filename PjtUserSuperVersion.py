@@ -9,12 +9,12 @@ def check_prenom_nom(x_prenom_x_nom):
     # Si x_prenom_x_nom est vide, retourne False
     if not x_prenom_x_nom:
         return False
-    caractere_pas_ok = ""  # Initialisation d'une variable chaîne de caractères vide
+    caractere_pas_ok = 0  # Initialisation d'une variable entière à 0...
     # Vérifie chaque caractère dans le prénom ou le nom
     for c in x_prenom_x_nom:
         # Si le caractère n'est pas alphabétique ou numérique, ajoute-le à la chaîne de caractères non valides
         if not c.isalnum() and c != "-":
-            caractere_pas_ok += c
+            caractere_pas_ok += 1
     # Si la chaîne de caractères non valides est vide, le prénom ou le nom est valide
     # Sinon, elle contient les caractères non valides du prénom
     if caractere_pas_ok:
@@ -60,17 +60,17 @@ def check_login(x_login):
     # Si x_login est vide, retourne False
     if not x_login:
         return False
-    caractere_pas_ok = ""  # Initialisation d'une variable chaîne de caractères vide
+    caractere_pas_ok = 0  # Initialisation d'une variable entière à 0...
     # Vérifie chaque caractère dans le login
     for c in x_login:
         # Si le caractère n'est pas en minuscule ou n'est pas alphabétique ou numérique, ajoute-le à la chaîne de
         # caractères non valides
-        if not c.islower() or not c.isalnum():
-            caractere_pas_ok += c
+        if not c.islower() and not c.isalnum():
+            caractere_pas_ok += 1
     # Si la chaîne de caractères non valides est vide, le login est valide
     # Sinon, elle contient les caractères non valides du login
     if caractere_pas_ok:
-        return caractere_pas_ok
+        return False
     else:
         return True
 
