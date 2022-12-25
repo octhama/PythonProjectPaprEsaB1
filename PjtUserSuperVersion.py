@@ -40,7 +40,7 @@ def check_email(x_email):
     # vérifie si l'email a le bon format
     if '@' in x_email and '.' in x_email:
         # sépare le nom d'utilisateur et le domaine
-        aka_utilisateur, dns = x_email.split('@')
+        aka_utilisateur, dns = x_email.split("@")
         # Vérifie si le nom d'utilisateur contient au moins un point et un tiret
         if "." or "-" in aka_utilisateur:
             # Vérifie si le domaine contient strictement un point et aucun point au début et la fin du domaine
@@ -205,7 +205,7 @@ utilisateur_1_mdp_cache = "*" * len(utilisateur_1_mdp)
 print("Les informations du premier utilisateurs ont été bien enregistrer...", "Madame/Monsieur", utilisateur_1_prenom,
       utilisateur_1_nom.upper(), "domicilié au", utilisateur_1_adresse, "Namur", ", avec pour adresse mail",
       utilisateur_1_email, "aka", utilisateur_1_login, "et mot de passe crypté", utilisateur_1_mdp_cache)
-
+# Demande à ajouter un autre utilisateur ou non
 reponse = input("Voulez-vous enregistrer un autre utilisateur (oui | non) :")
 if reponse == "oui":
     # Séparateur affichant 100 étoiles sur une ligne
