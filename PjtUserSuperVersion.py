@@ -206,6 +206,7 @@ utilisateur_1_mdp_cache = "*" * len(utilisateur_1_mdp)
 print("Les informations du premier utilisateurs ont été bien enregistrer...", "Madame/Monsieur", utilisateur_1_prenom,
       utilisateur_1_nom.upper(), "domicilié au", utilisateur_1_adresse, "Namur", ", avec pour adresse mail",
       utilisateur_1_email, "aka", utilisateur_1_login, "et mot de passe crypté", utilisateur_1_mdp_cache)
+
 # Demande à ajouter un autre utilisateur ou non
 reponse = input("Voulez-vous enregistrer un autre utilisateur (oui | non) :")
 if reponse == "oui":
