@@ -8,8 +8,11 @@
 def check_prenom_nom(x_prenom_x_nom):
     """
 
-    :param x_prenom_x_nom:
-    :return:
+    :param x_prenom_x_nom: représentant tout nom et prénom qui serait traité par cette fonction
+    :return: première instruction conditionnelle renvoie False si aucun nom ou prénom n'a été encoder.
+    Une boucle itérative utilisée pour identifier les caractères indésirables en prenant en compte une instruction
+    conditionnelle imbriquée dans la boucle.
+    Enfin une instruction conditionnelle qui renvoie False si les caractères indésirables ont été identifier.
     """
     # Si x_prenom_x_nom est vide, retourne False
     if not x_prenom_x_nom:
@@ -32,8 +35,8 @@ def check_prenom_nom(x_prenom_x_nom):
 def check_adresse(x_adresse):
     """
 
-    :param x_adresse:
-    :return:
+    :param x_adresse: représentant toutes adresses qui seraient avec cette fonction
+    :return: retourne False si aucune adresse n'a été encoder
     """
     # Si l'adresse est vide, renvoie False
     # Sinon, renvoie True
@@ -47,8 +50,14 @@ def check_adresse(x_adresse):
 def check_email(x_email):
     """
 
-    :param x_email:
-    :return:
+    :param x_email: représentant tous email qui seraient traités avec cette fonction
+    :return: une première instruction conditionnelle pour vérifier si un mail a été encoder ou pas.
+    Une instruction conditionnelle pour verifier si le mail est au bon format.
+    Une boucle itérative imbriquant une instruction conditionnelle pour vérifier si le nom d'utilisateur contient au
+    moin un point et un tiret.
+    Un second traitement sur la deuxième partie de l'adresse mail faisant usage d'une boucle itérative imbriquant une
+    instruction conditionnelle vérifiant si le domaine contient strictement un point et aucun point ni au début ni à la
+    fin
     """
     # Si x_email est vide, retourne False
     if not x_email:
@@ -66,7 +75,7 @@ def check_email(x_email):
             return False
 
         for c in dns:
-            # Vérifie si le domaine contient strictement un point et aucun point au début et la fin du domaine
+            # Vérifie si le domaine contient strictement un point et aucun point ni au début ni à la fin
             if not c.isalnum() and c not in ".":
                 return False
         if dns[0] in "." or dns[-1] in ".":
@@ -80,8 +89,11 @@ def check_email(x_email):
 def check_login(x_login):
     """
 
-    :param x_login:
-    :return:
+    :param x_login: représentant tous logins qui seraient traités par cette fonction
+    :return: instruction conditionnelle pour vérifier si un login a été bien encoder.
+    Une boucle itérative imbriquant une instruction conditionnelle pour vérifier si le login est bien encodé en
+    minuscule et n'est pas alphanumérique.
+    Renvoyer False si les éléments indésirables ont été identifier
     """
     # Si x_login est vide, retourne False
     if not x_login:
@@ -105,8 +117,13 @@ def check_login(x_login):
 def check_mdp(x_mdp):
     """
 
-    :param x_mdp:
-    :return:
+    :param x_mdp: représentant tout mot de passes qui seraient traités par cette fonction
+    :return: une première instruction conditionnelle qui renvoie False si aucun mot de passe n'a été encodé.
+    La deuxième instruction conditionnelle retourne True si la taille du mot de passe est supérieure ou égale à 10
+    caractères. Une boucle itérative examine chaque caractère de la chaine de caractères encodé et faire le compte des
+    caractères nécessaire (minuscules, majuscules, chiffres, caractères spéciaux) pour le respect du format du mot
+    de passe. Enfin une instruction conditionnelle qui renvoie True si la condition suivante est respecté : minimum des
+    minuscules, majuscules, chiffres et caractères spéciaux.
     """
     # Si x_mdp est vide, retourne False
     if not x_mdp:
@@ -146,9 +163,10 @@ def check_mdp(x_mdp):
 def utilisateur_login_check(utilisateur_x_login, utilisateur_y_login):
     """
 
-    :param utilisateur_x_login:
-    :param utilisateur_y_login:
-    :return:
+    :param utilisateur_x_login: représentant tout premier login traité
+    :param utilisateur_y_login: représentant tout deuxième login traité
+    :return: retourne vrai si la condition initiale est verifier sachant les logins sont égaux (sens positif dans
+    la fonction, mais doit être traité négativement à l'usage de cette fonction)
     """
     # Renvoie True si les logins sont égaux, False sinon
     if utilisateur_x_login == utilisateur_y_login:
@@ -327,11 +345,13 @@ if not utilisateur_login_check(utilisateur_1_login, utilisateur_2_login):
 else:
     print("Attention logins similaire !!!")
 
+# Documentation pour chaque fonction
 print(check_prenom_nom.__doc__)
 print(check_adresse.__doc__)
 print(check_email.__doc__)
 print(check_login.__doc__)
 print(check_mdp.__doc__)
 print(utilisateur_login_check.__doc__)
+
 # Séparateur affichant 300 étoiles sur une ligne
 exit("*" * 300)
