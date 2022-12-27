@@ -83,3 +83,38 @@
 #     print("Pas ok")
 
 # Déclaration de variables...
+
+email = input('Entrez une adresse email\n')
+
+# Découper l'adresse email en deux parties : la partie locale et le domaine
+local_part, domain = email.split('@')
+
+# Vérifier que la partie locale ne contient que des caractères alphanumériques, des points et des tirets,
+# et qu'elle ne commence ni ne se termine pas par un point ou un tiret
+for c in local_part:
+    if not c.isalnum() and c not in ('.', '-'):
+        print("Votre adresse email n'est pas valide : la partie locale de l'adresse contient des caractères non "
+              "autorisés")
+        exit()
+if local_part[0] in ('.', '-') or local_part[-1] in ('.', '-'):
+    print("Votre adresse email n'est pas valide : la partie locale de l'adresse contient des caractères non autorisés")
+    exit()
+
+# Vérifier que le domaine ne contient que des caractères alphanumériques, des points et des tirets,
+# et qu'il ne commence ni ne se termine pas par un point ou un tiret
+for c in domain:
+    if not c.isalnum() and c not in ('.', '-'):
+        print("Votre adresse email n'est pas valide : le domaine de l'adresse contient des caractères non autorisés")
+        exit()
+if domain[0] in ('.', '-') or domain[-1] in ('.', '-'):
+    print("Votre adresse email n'est pas valide : le domaine de l'adresse contient des caractères non autorisés")
+    exit()
+
+# Vérifier que le domaine comprend au moins un point et deux parties séparées par ce point
+# (par exemple, "example.com")
+if '.' not in domain or domain.count('.') > 1 or domain.index('.') == 0 or domain.index('.') == len(domain) - 1:
+    print("Votre adresse email n'est pas valide : le domaine de l'adresse est incorrect")
+    exit()
+
+# Si aucune erreur n'a été détectée, l'adresse est valide
+print("Bravo, votre adresse email est valide")

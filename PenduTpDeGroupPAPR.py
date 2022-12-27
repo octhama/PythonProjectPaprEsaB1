@@ -15,7 +15,7 @@ while tentative > 0:
         tentative -= 1
     else:
         for i in range(len(mot)):
-            #  print(mot[i]) || auto incrémentition dans les cases indexées contenant chaque caractère
+            #  print(mot[i]) || auto incrementation dans les cases indexées contenant chaque caractère
             if mot[i] == lettre:
                 mot_masque = mot_masque[0:i] + lettre + mot_masque[i+1:]
     print(mot_masque)

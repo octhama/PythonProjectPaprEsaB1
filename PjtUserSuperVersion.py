@@ -39,20 +39,26 @@ def check_email(x_email):
     if not x_email:
         return False
     # vérifie si l'email a le bon format
-    if '@' in x_email and '.' in x_email:
+    if "@" in x_email and "." in x_email:
         # sépare le nom d'utilisateur et le domaine
         aka_utilisateur, dns = x_email.split("@")
-        # Vérifie si le nom d'utilisateur contient au moins un point et un tiret
-        if "." or "-" in aka_utilisateur:
-            # Vérifie si le domaine contient strictement un point et aucun point au début et la fin du domaine
-            if "." in dns and "." not in dns[:1] and "." not in dns[-1:]:
-                return True
-            else:
+
+        for c in aka_utilisateur:
+            # Vérifie si le nom d'utilisateur contient au moins un point et un tiret
+            if not c.isalnum() and c not in (".", "-"):
                 return False
-        else:
+        if aka_utilisateur[0] in (".", "-") or aka_utilisateur[-1] in (".", "-"):
             return False
-    else:
-        return False
+
+        for c in dns:
+            # Vérifie si le domaine contient strictement un point et aucun point au début et la fin du domaine
+            if not c.isalnum() and c not in ".":
+                return False
+        if dns[0] in "." or dns[-1] in ".":
+            return False
+        if "." in dns or dns.count(".") < 1:
+            return True
+    return False
 
 
 # Fonction par variable pour vérifier un login
@@ -267,7 +273,7 @@ if reponse == "oui":
         print("-" * 100)
         while True:
             # Demande le mot de passe du second utilisateur
-            utilisateur_2_mdp = input("Entrer le mot de passe du deuxième utilisateur")
+            utilisateur_2_mdp = input("Entrer le mot de passe du deuxième utilisateur: ")
             # Vérifie si le mot de passe est valide
             if check_mdp(utilisateur_2_mdp):
                 print("Le mot de passe est valide.")
@@ -282,13 +288,13 @@ if reponse == "oui":
           utilisateur_2_email, "aka", utilisateur_2_login, "et mot de passe crypté", utilisateur_2_mdp_cache)
     # Séparateur affichant 300 étoiles sur une ligne
 else:
-    print("Enregistrement terminer!")
+    exit("Enregistrement terminer!")
 
 print("*" * 300)
 # Vérifie si les logins des deux utilisateurs sont égaux
-if utilisateur_login_check(utilisateur_1_login, utilisateur_2_login):
-    print("Attention logins similaire !!!")
-else:
+if not utilisateur_login_check(utilisateur_1_login, utilisateur_2_login):
     print("Logins pas similaire ;)...")
+else:
+    print("Attention logins similaire !!!")
 # Séparateur affichant 300 étoiles sur une ligne
-print("*" * 300)
+exit("*" * 300)
