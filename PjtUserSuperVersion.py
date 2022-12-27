@@ -6,6 +6,11 @@
 
 # Fonction par variable pour vérifier un prénom
 def check_prenom_nom(x_prenom_x_nom):
+    """
+
+    :param x_prenom_x_nom:
+    :return:
+    """
     # Si x_prenom_x_nom est vide, retourne False
     if not x_prenom_x_nom:
         return False
@@ -25,6 +30,11 @@ def check_prenom_nom(x_prenom_x_nom):
 
 # Fonction par variable pour vérifier une adresse
 def check_adresse(x_adresse):
+    """
+
+    :param x_adresse:
+    :return:
+    """
     # Si l'adresse est vide, renvoie False
     # Sinon, renvoie True
     if not x_adresse:
@@ -35,6 +45,11 @@ def check_adresse(x_adresse):
 
 # Fonction par variable pour vérifier un email
 def check_email(x_email):
+    """
+
+    :param x_email:
+    :return:
+    """
     # Si x_email est vide, retourne False
     if not x_email:
         return False
@@ -63,6 +78,11 @@ def check_email(x_email):
 
 # Fonction par variable pour vérifier un login
 def check_login(x_login):
+    """
+
+    :param x_login:
+    :return:
+    """
     # Si x_login est vide, retourne False
     if not x_login:
         return False
@@ -83,6 +103,11 @@ def check_login(x_login):
 
 # Fonction par variable pour vérifier un mot de passe
 def check_mdp(x_mdp):
+    """
+
+    :param x_mdp:
+    :return:
+    """
     # Si x_mdp est vide, retourne False
     if not x_mdp:
         return False
@@ -119,6 +144,12 @@ def check_mdp(x_mdp):
 
 # Fonction par variable pour vérifier si deux logins sont égaux
 def utilisateur_login_check(utilisateur_x_login, utilisateur_y_login):
+    """
+
+    :param utilisateur_x_login:
+    :param utilisateur_y_login:
+    :return:
+    """
     # Renvoie True si les logins sont égaux, False sinon
     if utilisateur_x_login == utilisateur_y_login:
         return True
@@ -286,9 +317,8 @@ if reponse == "oui":
           utilisateur_2_prenom,
           utilisateur_2_nom.upper(), "domicilié au", utilisateur_2_adresse, "Namur", ", avec pour adresse mail",
           utilisateur_2_email, "aka", utilisateur_2_login, "et mot de passe crypté", utilisateur_2_mdp_cache)
-    # Séparateur affichant 300 étoiles sur une ligne
 else:
-    exit("Enregistrement terminer!")
+    exit("Enregistrement terminer !")
 
 print("*" * 300)
 # Vérifie si les logins des deux utilisateurs sont égaux
