@@ -6,6 +6,7 @@ tentative = 7
 mot_masque = "_" * len(mot)
 lettres_proposees = ""
 print(mot_masque)
+
 while tentative > 0:
     lettre = input("Indiquez votre lettre : ")
     while lettre in lettres_proposees:
@@ -18,5 +19,9 @@ while tentative > 0:
             #  print(mot[i]) || auto incrementation dans les cases indexées contenant chaque caractère
             if mot[i] == lettre:
                 mot_masque = mot_masque[0:i] + lettre + mot_masque[i+1:]
-    print(mot_masque)
-
+                print(mot_masque)
+if "_" not in mot_masque:
+    exit("Félicitations ! Vous avez trouvé le mot")
+else:
+    print("Désolé, vous avez perdu. Le mot était : ", mot)
+    exit()
