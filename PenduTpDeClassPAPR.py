@@ -23,7 +23,7 @@ def check_mot_masque(x_mot_masque):
     else:
         return False
 
-
+# À revoir avec le Professeur!!!
 # def remplace_lettre_proposees(x_c, x_mot, x_lettre, x_mot_masque):
 #    if x_mot[x_c] == x_lettre:
 #        x_mot_masque = x_mot_masque[:x_c] + x_lettre + x_mot_masque[x_c + 1:]
