@@ -9,7 +9,7 @@ def check_game_rules(x_tentative, x_mot_masque):
 
 def check_lettre_proposees(x_lettre, x_lettre_proposees):
     x_lettre_proposees += x_lettre
-    return
+    return False
 
 
 def check_lettre_dans_mot(x_lettre, x_mot):
