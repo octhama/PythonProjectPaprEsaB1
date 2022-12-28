@@ -35,10 +35,9 @@ mot_masque = "_" * len(mot)
 lettres_proposees = ""
 
 while check_game_rules(tentative, mot_masque):
-    # Print current state of the game
-    print(mot_masque)  # affiche le mot masqué à chaque tour de boucle
+    # Afficher l'état des tentatives et du mot masqué
+    print(mot_masque)  # affiche le mot masqué à chaque tour de boucle...
     print(f"Tentatives restantes: ", tentative)
-    # print("Lettres proposées: ", lettres_proposees)
 
     lettre = input("Indiquez votre lettre : ")
 
