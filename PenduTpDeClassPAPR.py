@@ -1,5 +1,6 @@
 # Travail de classe en python pattern représentant le jeu Le Pendu
 # superviser pas André NUYENS ESA Namur BAC 1 2022
+# Pattern complèté par Hasler TEHOU dans le cadre du Travail Individuel en PAPR-ESA-Namur
 
 mot = "oxymore"
 tentative = 7
@@ -9,8 +10,8 @@ lettres_proposees = ""
 while tentative > 0 and "_" in mot_masque:
     # Print current state of the game
     print(mot_masque)  # affiche le mot masqué à chaque tour de boucle
-    print(f"Tentatives restantes: {tentative}")
-    print(f"Lettres proposées: {lettres_proposees}")
+    print(f"Tentatives restantes: ", tentative)
+    # print("Lettres proposées: ", lettres_proposees)
 
     lettre = input("Indiquez votre lettre : ")
 
