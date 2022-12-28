@@ -1,5 +1,5 @@
-# Travail de classe en python pattern représentant le jeu Le Pendu
-# superviser pas André NUYENS ESA Namur BAC 1 2022
+# Travail de classe en python (Pattern représentant le jeu Le Pendu)
+#  Superviser par André NUYENS ESA-Namur BAC-1-INFO-2022
 # Pattern complèté par Hasler TEHOU dans le cadre du Travail Individuel en PAPR-ESA-Namur
 
 mot = "oxymore"
