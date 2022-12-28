@@ -2,6 +2,7 @@
 #  Superviser par André NUYENS ESA-Namur BAC-1-INFO-2022
 # Pattern complèté par Hasler TEHOU dans le cadre du Travail Individuel en PAPR-ESA-Namur
 
+
 def check_game_rules(x_tentative, x_mot_masque):
     while x_tentative > 0 and "_" in x_mot_masque:
         return True
@@ -23,6 +24,7 @@ def check_mot_masque(x_mot_masque):
     else:
         return False
 
+
 # À revoir avec le Professeur!!!
 # def remplace_lettre_proposees(x_c, x_mot, x_lettre, x_mot_masque):
 #    if x_mot[x_c] == x_lettre:
@@ -37,7 +39,7 @@ lettres_proposees = ""
 while check_game_rules(tentative, mot_masque):
     # Afficher l'état des tentatives et du mot masqué
     print(mot_masque)  # affiche le mot masqué à chaque tour de boucle...
-    print(f"Tentatives restantes: ", tentative)
+    print("Tentatives restantes: ", tentative)
 
     lettre = input("Indiquez votre lettre : ")
 
