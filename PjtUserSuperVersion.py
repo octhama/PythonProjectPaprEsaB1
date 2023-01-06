@@ -1,14 +1,14 @@
 # Auteur : Hasler TEHOU
 # Date de création : 24/12/2022
 # Exécuter sous environnement Python 3.11
-# Licence : https://github.com/octhvmv/PythonProjectPaprEsaB1/blob/main/LICENSE
+# Licence : https://github.com/octhvmv/PythonProjectPaprEsaB1/blob/master/LICENSE
 
 
 # Fonction par variable pour vérifier un prénom
 def check_prenom_nom(x_prenom_x_nom):
     """
 
-    :param x_prenom_x_nom: représentant tout nom et prénom qui serait traité par cette fonction
+    :param x_prenom_x_nom: Représentant tout nom et prénom qui serait traité par cette fonction
     :return: première instruction conditionnelle renvoie False si aucun nom ou prénom n'a été encoder.
     Une boucle itérative utilisée pour identifier les caractères indésirables en prenant en compte une instruction
     conditionnelle imbriquée dans la boucle.
