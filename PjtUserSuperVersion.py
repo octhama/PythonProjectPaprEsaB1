@@ -344,7 +344,7 @@ if not utilisateur_login_check(utilisateur_1_login, utilisateur_2_login):
     print("Logins pas similaire ;)...")
 else:
     print("Attention logins similaire !!!")
-
+print("*" * 300)
 # Documentation pour chaque fonction
 print(check_prenom_nom.__doc__)
 print(check_adresse.__doc__)
@@ -352,6 +352,5 @@ print(check_email.__doc__)
 print(check_login.__doc__)
 print(check_mdp.__doc__)
 print(utilisateur_login_check.__doc__)
-
 # Séparateur affichant 300 étoiles sur une ligne
-exit("*" * 300)
+print("*" * 300)
