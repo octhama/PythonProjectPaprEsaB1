@@ -1,5 +1,12 @@
-def toto(x_nom):
-    print(x_nom)
+def reverse_string(s):
+    phrase_inverse = ''
+    for caractere in s:
+        phrase_inverse = caractere + phrase_inverse
+    return phrase_inverse
 
 
-toto("Hasler")
+phrase = input("Mot : ")
+if phrase == reverse_string(phrase):
+    print("ok")
+else:
+    print(reverse_string(phrase))
