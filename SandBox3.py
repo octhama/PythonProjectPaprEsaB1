@@ -1,0 +1,27 @@
+damier = {}
+damier[0, 0] = 'noir'
+damier[0, 1] = 'blanc'
+damier[0, 2] = 'noir'
+damier[0, 3] = 'blanc'
+damier[0, 4] = 'noir'
+damier[0, 5] = 'blanc'
+damier[0, 6] = 'noir'
+damier[0, 7] = 'blanc'
+damier[1, 0] = 'blanc'
+damier[1, 1] = 'noir'
+damier[1, 2] = 'blanc'
+damier[1, 3] = 'noir'
+damier[1, 4] = 'blanc'
+damier[1, 5] = 'noir'
+damier[1, 6] = 'blanc'
+damier[1, 7] = 'noir'
+damier[2, 0] = 'noir'
+damier[2, 1] = 'blanc'
+damier[2, 2] = 'noir'
+damier[2, 3] = 'blanc'
+damier[2, 4] = 'noir'
+damier[2, 5] = 'blanc'
+damier[2, 6] = 'noir'
+print(damier)
+for cle in damier:
+    print(cle, ':', damier[cle])
