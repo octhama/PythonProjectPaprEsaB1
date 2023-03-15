@@ -1,9 +1,11 @@
-# Définition des constantes
-HAUTEUR_SAPIN = 10
+# Sapin de noël
 
-# Dessin de la base du sapin
-for i in range(HAUTEUR_SAPIN):
-    print(" " * (HAUTEUR_SAPIN - i - 1) + "*" * (2 * i + 1))
-
-# Dessin du tronc du sapin
-print(" " * (HAUTEUR_SAPIN - 1) + "*")
+for i in range(1, 11):
+    for j in range(1, 11 - i):
+        print(".", end="")
+    for k in range(1, i + 1):
+        print("* ", end="")
+    print()
+for i in range(1, -11):
+    print("*" * 5, end="")
+    print()

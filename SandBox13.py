@@ -35,7 +35,7 @@ while True:
     print(mon_perso_a_combattre)
 
     while mon_perso['pv'] > 0 and mon_perso_a_combattre['pv'] > 0:
-        print(mon_perso['nom'] + " attaque " + mon_perso_a_combattre['nom'] + " avec " + str(mon_perso['attaque']) + " points d'attaque")
+        print(mon_perso['nom'] + " attaque " + mon_perso_a_combattre['nom'] + " avec " + str(mon_perso['attaque']) + "points d'attaque")
         mon_perso_a_combattre['pv'] -= mon_perso['attaque']
         print(mon_perso_a_combattre['nom'] + " perd " + str(mon_perso['attaque']) + " points de vie, il lui reste " + str(mon_perso_a_combattre['pv']) + " points de vie")
     if mon_perso_a_combattre['pv'] <= 0:

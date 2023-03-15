@@ -8,14 +8,16 @@ def verifie_element(x_tab):
 
 def check_elem():
     res = []
-    for i, elt in enumerate(tableau):
-        if elemment == elt:
-            rest.append(i)
+    for i, elt in enumerate(tab):
+        if elt in tab:
+            res.append(i)
+    return res
 
 
 def inverse_tab(x_tab):
     for i in x_tab:
-        return x_tab[::-i]
+        x_tab.reverse()
+        return x_tab
 
 
 def calcul_average(x_tab):
@@ -35,8 +37,7 @@ def somme_matrice(x_matrice):
         som_ligne += i
         for j in range(len(x_matrice)):
             som_colonne += j
-            return som_colonne[j]
-    return som_ligne[i]
+    return som_ligne, som_colonne
 
 
 tab = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

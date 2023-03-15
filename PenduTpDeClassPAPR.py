@@ -26,7 +26,7 @@ def check_mot_masque(x_mot_masque):
 
 
 # À revoir avec le Professeur!!!
-# def remplace_lettre_proposees(x_c, x_mot, x_lettre, x_mot_masque):
+# def remplace_lettre_proposees (x_c, x_mot, x_lettre, x_mot_masque):
 #    if x_mot[x_c] == x_lettre:
 #        x_mot_masque = x_mot_masque[:x_c] + x_lettre + x_mot_masque[x_c + 1:]
 
@@ -38,7 +38,7 @@ lettres_proposees = ""
 
 while check_game_rules(tentative, mot_masque):
     # Afficher l'état des tentatives et du mot masqué
-    print(mot_masque)  # affiche le mot masqué à chaque tour de boucle...
+    print(mot_masque)  # Afficher le mot masqué à chaque tour de boucle
     print("Tentatives restantes: ", tentative)
 
     lettre = input("Indiquez votre lettre : ")
@@ -51,9 +51,10 @@ while check_game_rules(tentative, mot_masque):
     if check_lettre_dans_mot(lettre, mot):
         for i in range(len(mot)):
             if mot[i] == lettre:
-                mot_masque = mot_masque[:i] + lettre + mot_masque[i + 1:]  # remplace-le "_" par la lettre trouvée
+                mot_masque = mot_masque[:i] + lettre + mot_masque[i + 1:]  # remplace les "_" par la lettre
     else:
-        tentative -= 1  # lettre non trouvée décrémente d'une tentative
+        tentative -= 1  # décrémente le nombre de tentatives restantes si la lettre n'est pas dans le mot
+
 
 # Afficher le résultat final
 if check_mot_masque(mot_masque):  # le mot a été trouvé
