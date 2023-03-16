@@ -20,6 +20,6 @@ for pays in liste_pays:  # Parcourir chaque pays de la liste de dictionnaires (l
 # ouvrir_fichier(nom_du_fichier)
 # fermer_fichier(nom_du_fichier)
 
-print(choix_pays_code(liste_pays, ''))  # Afficher le nom du pays correspondant au code entré (str)
+# print(choix_pays_code(liste_pays, 'AW'))  # Afficher le nom du pays correspondant au code entré (str)
 print(compte_continent(liste_pays))  # Afficher le dictionnaire avec le nombre de pays par continent (dict)
-print(pays_sans_capital(liste_pays))  # Afficher les pays sans capitale (str)
+# print(pays_sans_capital(liste_pays))  # Afficher les pays sans capitale (str)

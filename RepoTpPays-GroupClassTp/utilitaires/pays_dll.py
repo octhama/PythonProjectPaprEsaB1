@@ -32,7 +32,8 @@ def charger_le_fichier(x_fichier):
     for ligne in lignes[1:]:  # Parcourir chaque ligne du fichier (sauf la première) (str)
         pays = {}
         for i, cle in enumerate(prem_ligne.split("|")):  # Parcourir chaque colonne du fichier (str)
-            pays[cle] = ligne[i].split("|").replace("\n", "")  # Créer un dictionnaire avec les noms des colonnes comme
+            pays[cle] = ligne[i].split("|")  # Ajouter les noms des colonnes comme clés et les valeurs de chaque ligne
+            # comme valeurs (str)
             # clés et les valeurs de chaque ligne comme valeurs (str)
         resultat.append(pays)  # Ajouter le dictionnaire à la liste de dictionnaires (list)
     return resultat  # Retourner la liste de dictionnaires (list)
