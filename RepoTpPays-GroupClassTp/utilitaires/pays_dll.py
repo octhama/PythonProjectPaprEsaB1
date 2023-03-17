@@ -17,7 +17,7 @@ def fermer_fichier(x_fichier):
     :param x_fichier: Fichier à fermer
     :return: None
     """
-    x_fichier.close()
+    x_fichier.close()  # Fermer le fichier (str)
 
 
 def charger_le_fichier(x_fichier):
@@ -54,7 +54,7 @@ def choix_pays_code(x_list_pays, x_code):
         if pays[cle] == x_code:  # Si le code du pays est égal au code entré
             return pays['Nom français']  # Retourner le nom du pays (str)
         else:
-            return None  # Retourner None
+            return None  # Retourner None si le code n'est pas trouvé (str)
 
 
 def compte_continent(x_liste_pays):
@@ -71,3 +71,6 @@ def pays_sans_capital(x_liste_pays):
     for pays in x_liste_pays:  # Parcourir chaque pays de la liste de dictionnaires (list)
         if pays['Capital'] == "-":  # Si le pays n'a pas de capitale
             print(pays['Nom français'], end="\t")  # Afficher le nom du pays (str)
+    print()  # Retourner à la ligne (str)
+    
+
