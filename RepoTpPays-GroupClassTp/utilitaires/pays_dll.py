@@ -17,7 +17,7 @@ def fermer_fichier(x_fichier):
     :param x_fichier: Fichier à fermer
     :return: None
     """
-    x_fichier.close()  # Fermer le fichier (str)
+    x_fichier.close()  # Fermer le fichier (str) ouvert en mode lecture (r)
 
 
 def charger_le_fichier(x_fichier):
