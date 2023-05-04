@@ -5,7 +5,7 @@ def ouvrir_fichier(x_chemin_fichier):
     :return: Retourne le fichier ouvert
     """
     try:  # Essayer d'ouvrir le fichier (str)
-        x_fichier = open(x_chemin_fichier, 'r', encoding='UTF-8')  # Ouvrir le fichier en mode lecture (r) (str)
+        x_fichier = open(x_chemin_fichier, 'r', encoding = 'UTF-8')  # Ouvrir le fichier en mode lecture (r) (str)
     except FileNotFoundError:  # Si le fichier n'existe pas
         return None  # Retourner None
     return x_fichier  # Retourner le fichier ouvert
@@ -33,13 +33,13 @@ def charger_le_fichier(x_fichier):
         pays = {}
         for i, cle in enumerate(prem_ligne.split("|")):  # Parcourir chaque colonne du fichier (str)
             pays[cle] = ligne[i].split("|")  # Ajouter les noms des colonnes comme clés et les valeurs de chaque ligne
-            # comme valeurs (str)
-            # clés et les valeurs de chaque ligne comme valeurs (str)
+        # comme valeurs (str)
+        # clés et les valeurs de chaque ligne comme valeurs (str)
         resultat.append(pays)  # Ajouter le dictionnaire à la liste de dictionnaires (list)
     return resultat  # Retourner la liste de dictionnaires (list)
 
 
-def choix_pays_code(x_list_pays, x_code):
+def pays_code(x_list_pays, x_code):
     """
 
     :param x_list_pays: liste de dictionnaires contenant les informations des pays (list)
@@ -70,7 +70,11 @@ def compte_continent(x_liste_pays):
 def pays_sans_capital(x_liste_pays):
     for pays in x_liste_pays:  # Parcourir chaque pays de la liste de dictionnaires (list)
         if pays['Capital'] == "-":  # Si le pays n'a pas de capitale
-            print(pays['Nom français'], end="\t")  # Afficher le nom du pays (str)
+            print(pays['Nom français'], end = "\t")  # Afficher le nom du pays (str)
     print()  # Retourner à la ligne (str)
-    
 
+
+def pays_code_alpha(x_liste_pays):
+    for pays in x_liste_pays:  # Parcourir chaque pays de la liste de dictionnaires (list)
+        if "D" <= pays['Code alpha-2'][0] <= "G":  # Si le code alpha-2 est compris entre D et G
+            print(pays['Nom français'], end = "\t")  # Afficher le nom du pays (str)
