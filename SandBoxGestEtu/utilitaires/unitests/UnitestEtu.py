@@ -1,45 +1,23 @@
 import unittest
 from SandBoxGestEtu.moduleGestEtu.GestEtu import *
+from SandBoxGestEtu.moduleGestEtu.GestEtuCote import *
+from SandBoxGestEtu.moduleGestEtu.GestEtuList import *
 
 
-class TestMenuPrincipal(unittest.TestCase):
-	def test_menu_principal(self):
-		self.assertEqual(afficher_menu(), True)
+def test_enregistrer_etudiant(self):
+	dico_etudiant = {}
+	self.assertEqual(enregistrer_etudiant(self.dico_etudiant, {"001": ["Dupont", "Jean", "20", "M", "12"]}))
+	self.assertEqual(enregistrer_etudiant(self.dico_etudiant, {"002": ["Clement", "Max", "20", "M", "12"]}))
 
 
-class TestAfficherEtudiants(unittest.TestCase):
-	def test_afficher_etudiants(self):
-		self.assertEqual(afficher_etudiants(
-			{"1": ["Dupont", "Jean", 20, "M", 15.5], "2": ["Durand", "Marie", 21, "F", 16.5],
-			 "3": ["Martin", "Pierre", 22, "M", 17.5]}), True)
+def test_ajouter_etudiant_fichier(self):
+	self.assertEqual(ajouter_etudiant_fichier("resources/etudiants.csv", "001", "Dupont", "Jean", "20", "M", "12"))
+	self.assertEqual(ajouter_etudiant_fichier("resources/etudiants.csv", "002", "Clement", "Max", "20", "M", "12"))
 
 
-class TestEnregistrerEtudiant(unittest.TestCase):
-	def test_enregistrer_etudiant(self):
-		self.assertEqual(enregistrer_etudiant(
-			{"1": ["Dupont", "Jean", 20, "M", 15.5], "2": ["Durand", "Marie", 21, "F", 16.5],
-			 "3": ["Martin", "Pierre", 22, "M", 17.5]}), True)
-
-
-class TestModifierEtudiant(unittest.TestCase):
-	def test_modifier_etudiant(self):
-		self.assertEqual(modifier_etudiant(
-			{"1": ["Dupont", "Jean", 20, "M", 15.5], "2": ["Durand", "Marie", 21, "F", 16.5],
-			 "3": ["Martin", "Pierre", 22, "M", 17.5]}), True)
-
-
-class TestSupprimerEtudiant(unittest.TestCase):
-	def test_supprimer_etudiant(self):
-		self.assertEqual(supprimer_etudiant(
-			{"1": ["Dupont", "Jean", 20, "M", 15.5], "2": ["Durand", "Marie", 21, "F", 16.5],
-			 "3": ["Martin", "Pierre", 22, "M", 17.5]}), True)
-
-
-class TestAjouterEtudiantFichier(unittest.TestCase):
-	def test_ajouter_etudiant_fichier(self):
-		self.assertEqual(ajouter_etudiant_fichier(
-			{"1": ["Dupont", "Jean", 20, "M", 15.5], "2": ["Durand", "Marie", 21, "F", 16.5],
-			 "3": ["Martin", "Pierre", 22, "M", 17.5]}), True)
+def test_enregistrer_cote_etudiant(self):
+	self.assertEqual(enregistrer_cote_etudiant("resources/cotes.csv", "001", "Philosophie", "12"))
+	self.assertEqual(enregistrer_cote_etudiant("resources/cotes.csv", "001", "Mathematiques", "15"))
 
 
 if __name__ == '__main__':

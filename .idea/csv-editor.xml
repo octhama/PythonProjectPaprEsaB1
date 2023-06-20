@@ -3,10 +3,45 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/RepoTpPays-GroupClassTp/ressources/pays.csv">
+        <entry key="/ExamenAlgoProgHaslerTehouESAJuin2023/resources/numNatOk.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/ExamenAlgoProgHaslerTehouESAJuin2023/resources/numNatOkAndSexe.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/RepoTpPaysGroupClassTp/ressources/pays.csv">
           <value>
             <Attribute>
               <option name="separator" value="|" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/SandBoxGestEtu/resources/cote_etu.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/SandBoxGestEtu/resources/cotes.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/SandBoxGestEtu/resources/etudiants.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
             </Attribute>
           </value>
         </entry>
