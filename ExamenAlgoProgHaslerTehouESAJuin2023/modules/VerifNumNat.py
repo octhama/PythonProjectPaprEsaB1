@@ -31,7 +31,6 @@ def verifsexe():
 	nat_ok_sexe_fichier = open("resources/numNatOkAndSexe.csv", "w")
 	for ligne in nat_ok_fichier:
 		ligne = ligne.strip("\n")
-		
 		if int(ligne[0]) % 2 == 0:
 			# print(ligne, "F")
 			nat_ok_sexe_fichier.write(ligne + " F" + "\n")
