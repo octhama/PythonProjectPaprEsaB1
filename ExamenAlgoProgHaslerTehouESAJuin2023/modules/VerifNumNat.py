@@ -24,20 +24,22 @@ def verifnatnumfich():
 def verifsexe():
 	"""
 	
-	:return: Cette fonction permet de vérifier le sexe des numeros nationaux et de les faire correspondre
+	:return: Cette fonction permet de séparer les numéros nationaux valides et le sexe correspondant
 	"""
-	nat_ok_fichier = open("resources/numNatOk.csv", "r")
-	nat_ok_sexe_fichier = open("resources/numNatOkAndSexe.csv", "w")
-	for ligne in nat_ok_fichier:
-		ligne = ligne.strip("\n")
-		if int(ligne[0]) % 2 == 0:
-			# print(ligne, "F")
-			nat_ok_sexe_fichier.write(ligne + " F" + "\n")
-		else:
-			# print(ligne, "M")
-			nat_ok_sexe_fichier.write(ligne + " M" + "\n")
-	nat_ok_sexe_fichier.close()
-	nat_ok_fichier.close()
+	try:
+		x_fichier = open("resources/numNatOk.csv", "r")
+	except FileNotFoundError:
+		print("Le fichier n'existe pas")
+	else:
+		y_fichier = open("resources/numNatOkAndSexe.csv", "w")
+		for ligne in x_fichier:
+			ligne = ligne.strip("\n")
+			if int(ligne[0]) % 2 == 0:
+				y_fichier.write(ligne + ";" + "F" + "\n")
+			else:
+				y_fichier.write(ligne + ";" + "M" + "\n")
+		y_fichier.close()
+		x_fichier.close()
 
 
 def nbre_nat():
