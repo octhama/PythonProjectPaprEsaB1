@@ -28,7 +28,6 @@ def verifsexe():
 	"""
 	nat_ok_fichier = open("resources/numNatOk.csv", "r")
 	nat_ok_sexe_fichier = open("resources/numNatOkAndSexe.csv", "w")
-	nat_ok_sexe_fichier = open("resources/numNatOkAndSexe.csv", "w")
 	for ligne in nat_ok_fichier:
 		ligne = ligne.strip("\n")
 		if int(ligne[0]) % 2 == 0:
@@ -37,7 +36,6 @@ def verifsexe():
 		else:
 			# print(ligne, "M")
 			nat_ok_sexe_fichier.write(ligne + " M" + "\n")
-	nat_ok_sexe_fichier.close()
 	nat_ok_sexe_fichier.close()
 	nat_ok_fichier.close()
 
