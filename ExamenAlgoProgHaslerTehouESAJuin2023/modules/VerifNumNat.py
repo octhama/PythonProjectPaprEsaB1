@@ -35,9 +35,9 @@ def verifsexe():
 		for ligne in x_fichier:
 			ligne = ligne.strip("\n")
 			if int(ligne[0]) % 2 == 0:
-				y_fichier.write(ligne + ";" + "F" + "\n")
+				y_fichier.write(ligne + "," + "F" + "\n")
 			else:
-				y_fichier.write(ligne + ";" + "M" + "\n")
+				y_fichier.write(ligne + "," + "M" + "\n")
 		y_fichier.close()
 		x_fichier.close()
 
