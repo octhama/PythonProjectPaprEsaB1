@@ -11,13 +11,13 @@ def verifnatnumfich():
 	except FileNotFoundError:
 		print("Le fichier n'existe pas")
 	else:
+		y_fichier = open("resources/numNatOk.csv", "w")
 		for ligne in x_fichier:
 			ligne = ligne.strip("\n")
 			if len(ligne) == 11 and int(ligne[9:11]) == 97 - int(ligne[0:9]) % 97:
 				# print(ligne)
-				y_fichier = open("resources/numNatOk.csv", "a")
 				y_fichier.write(ligne + "\n")
-				y_fichier.close()
+		y_fichier.close()
 		x_fichier.close()
 
 
@@ -27,18 +27,19 @@ def verifsexe():
 	:return: Cette fonction permet de vérifier le sexe des numeros nationaux et de les faire correspondre
 	"""
 	nat_ok_fichier = open("resources/numNatOk.csv", "r")
+	nat_ok_sexe_fichier = open("resources/numNatOkAndSexe.csv", "w")
+	nat_ok_sexe_fichier = open("resources/numNatOkAndSexe.csv", "w")
 	for ligne in nat_ok_fichier:
 		ligne = ligne.strip("\n")
+		
 		if int(ligne[0]) % 2 == 0:
 			# print(ligne, "F")
-			nat_ok_sexe_fichier = open("resources/numNatOkAndSexe.csv", "a")
 			nat_ok_sexe_fichier.write(ligne + " F" + "\n")
-			nat_ok_sexe_fichier.close()
 		else:
 			# print(ligne, "M")
-			nat_ok_sexe_fichier = open("resources/numNatOkAndSexe.csv", "a")
 			nat_ok_sexe_fichier.write(ligne + " M" + "\n")
-			nat_ok_sexe_fichier.close()
+	nat_ok_sexe_fichier.close()
+	nat_ok_sexe_fichier.close()
 	nat_ok_fichier.close()
 
 
